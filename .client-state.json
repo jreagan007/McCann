@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "client": {
+    "slug": "mccann-injury-law",
+    "firmName": "McCann Dillon Jaffe and Lamb",
+    "domain": "mccanninjurylaw.com",
+    "market": "Philadelphia, PA (DMA #4, $4.8M/mo legal advertising)",
+    "practice": "Personal Injury / Trial Practice",
+    "offices": ["Philadelphia (HQ)", "Jenkintown PA", "Haddon Township NJ", "Wilmington DE"],
+    "positioning": "Fighter / verdict-led",
+    "primaryRecipient": "Robert E. McCann, Founding Member"
+  },
+  "phase": {
+    "current": "coding",
+    "completed": ["audit", "research", "design"],
+    "started": "2026-04-01",
+    "lastAdvanced": "2026-04-28T19:00:00Z",
+    "notes": "Homepage demo built as static HTML at clients/mccann-injury-law/homepage-demo/. PASS at 84 on demo-perfection-pass. Ready to show Robert McCann."
+  },
+  "currentTask": {
+    "id": "M002",
+    "title": "Show demo to Robert, gather feedback, schedule polish pass for the 5 priority items in 2026-04-28 preflight report",
+    "skill": null
+  },
+  "queue": {
+    "remaining": ["M002", "M003", "M004", "M005", "M006"],
+    "done": ["M001"],
+    "queueDoc": null,
+    "draftQueue": [
+      {"id": "M001", "title": "Build static HTML homepage demo + 1 full data-journalism article", "status": "DONE 2026-04-28"},
+      {"id": "M002", "title": "Show demo to Robert, gather feedback"},
+      {"id": "M003", "title": "Apply 5 priority fixes from preflight report (voice-profile.md extraction is rank 1)"},
+      {"id": "M004", "title": "Decide: bootstrap full Astro repo at ~/Projects/mccann-injury-law/ vs continue iterating in homepage-demo/"},
+      {"id": "M005", "title": "Build out the other 5 author articles per editorial-system.md"},
+      {"id": "M006", "title": "Bootstrap form (Gravity-Form replacement) with progressive disclosure per form-optimization skill"}
+    ]
+  },
+  "lockedDecisions": [
+    {"key": "tagline", "value": "TWENTY-FIVE YEARS. ONE TRIAL RECORD.", "lockedAt": "2026-04-15"},
+    {"key": "logo", "value": "Bracket (brass L-shape) wordmark, dark-bg version exported 2026-04-28 to logos/mccann-logo-dark.png (488x86 transparent PNG)", "lockedAt": "2026-04-15"},
+    {"key": "typography", "value": "Anton (display) + Inter (body) + JetBrains Mono (tabular/meta) + Source Serif 4 (article body)", "lockedAt": "2026-04-15"},
+    {"key": "color-system", "value": "Independence Navy #0B2545 + Liberty Brass #E8A22C + Alert Crimson #C03221 + Philly Newsprint #F4EDE0 + Keystone Slate #5A6F8F", "lockedAt": "2026-04-15"},
+    {"key": "color-rule", "value": "Brass on dark only. Navy/Ink on light. Brass-Bright never on light backgrounds (10ft AAA rule).", "lockedAt": "2026-04-28"},
+    {"key": "core-truth", "value": "McCann prepares every case like it's going to trial.", "lockedAt": "2026-04-15"},
+    {"key": "brand-transformation", "value": "Full transformation, not a fusion. Visual system modernizes for 10ft CTV viewing.", "lockedAt": "2026-04-15"},
+    {"key": "key-numbers", "value": "$200M+ recovered, 17 verdicts on homepage, 25-year track record, 4 offices PA/NJ/DE, 2698 keywords ranking", "lockedAt": "2026-04-01"},
+    {"key": "demo-preflight-pass", "value": {"date": "2026-04-28T19:00:00Z", "score": 84, "status": "PASS", "report": "demo-preflight/2026-04-28-homepage.json"}, "lockedAt": "2026-04-28T19:00:00Z"}
+  ],
+  "paths": {
+    "research": "~/Projects/taqticscom/clients/mccann-injury-law/research/",
+    "designAssets": "~/Projects/taqticscom/clients/mccann-injury-law/",
+    "homepageDemo": "~/Projects/taqticscom/clients/mccann-injury-law/homepage-demo/",
+    "auditScript": "~/Projects/taqticscom/clients/mccann-injury-law/audit-script.md",
+    "brandSystem": "~/Projects/taqticscom/clients/mccann-injury-law/brand-system.md",
+    "editorialSystem": "~/Projects/taqticscom/clients/mccann-injury-law/editorial-system.md",
+    "figmaSpec": "~/Projects/taqticscom/clients/mccann-injury-law/figma.md",
+    "figmaUrl": "https://www.figma.com/design/ds5um1gvzi81uYGIWxp9bZ",
+    "figmaFileKey": "ds5um1gvzi81uYGIWxp9bZ",
+    "designSystemSpec": "~/Projects/taqticscom/clients/mccann-injury-law/v3-design-system.md",
+    "attorneys": "~/Projects/taqticscom/clients/mccann-injury-law/attorneys.md",
+    "skillsAnalysis": "~/Projects/taqticscom/clients/mccann-injury-law/homepage-demo/SKILLS-FLOW-ANALYSIS.md",
+    "preflightReports": "~/Projects/taqticscom/clients/mccann-injury-law/demo-preflight/",
+    "buildRepo": null,
+    "handover": null,
+    "codingPrompt": null
+  },
+  "devServer": {
+    "type": "static-html",
+    "command": "open homepage-demo/index.html (file:// in browser, or any static server)",
+    "preview": "Currently rendered in Claude Code Launch preview panel"
+  }
+}
