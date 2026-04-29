@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>McCann Dillon Jaffe &amp; Lamb · Philadelphia Trial Lawyers · 25 Years on the Docket</title>
-<meta name="description" content="A Pennsylvania trial firm preparing every case for verdict, not for a quick settlement. $200M+ recovered across PA, NJ, and DE. Talk to a trial lawyer 24/7.">
+<meta name="description" content="A Pennsylvania trial firm. Every case prepared for verdict. $200M+ recovered across PA, NJ, DE. 17 verdicts on the public docket. Talk to a trial lawyer 24/7.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -65,6 +65,34 @@
 
   --content-max: 1200px;
   --content-pad: clamp(20px, 5vw, 64px);
+}
+
+/* ─── E-E-A-T big-number row override (Wave 2 layout fix) ─── */
+.eeat-bignum {
+  display: grid; gap: 48px;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+}
+.eeat-bignum .row {
+  display: grid; grid-template-columns: 1fr;
+  gap: 16px; align-items: baseline;
+  padding-top: 28px;
+  border-top: 1px solid rgba(11,37,69,0.18);
+}
+.eeat-bignum .row .num {
+  font-family: var(--display);
+  font-size: clamp(72px, 12vw, 160px);
+  color: var(--navy); line-height: 0.85; font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.eeat-bignum .row .label {
+  font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--slate-700); line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .eeat-bignum .row { grid-template-columns: 1.1fr 1fr; gap: 40px; }
+  .eeat-bignum .row .label { padding-bottom: 18px; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -673,10 +701,6 @@ a { color: inherit; }
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<div class="alertbar">
-  <strong>Pennsylvania's PI statute is two years.</strong> &nbsp; New Jersey: two. Delaware: two. Don't let the clock decide.
-</div>
-
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="brand" href="/" aria-label="McCann Dillon Jaffe & Lamb home">
@@ -725,17 +749,17 @@ a { color: inherit; }
   <div class="hero-inner">
     <div>
       <p class="hero-eyebrow">Philadelphia · Wilmington · Haddon Township · Jenkintown</p>
-      <h1 id="hero-heading">Twenty-five years.<br><strong>One trial record.</strong></h1>
-      <p class="hero-sub">A Pennsylvania trial firm preparing every case for verdict, not for a quick settlement. When insurance pushes back, we try the case. The carriers' own reserves prove the difference.</p>
+      <h1 id="hero-heading">25 Years.<br>One Record.<br><strong>One Call.</strong></h1>
+      <p class="hero-sub">We try the case. The record is public.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Talk to a trial lawyer</a>
-        <a class="btn btn-ghost" href="#investigations">Read our investigations</a>
+        <a class="btn btn-ghost" href="#investigations">Read the investigations</a>
       </div>
       <div class="hero-trustrow">
         <div><strong>$200M+</strong> recovered</div>
-        <div><strong>17</strong> verdicts above $980K</div>
-        <div><strong>3</strong> state bars · PA · NJ · DE</div>
-        <div><strong>4.7★</strong> on Google · 37 reviews</div>
+        <div><strong>17</strong> verdicts on record</div>
+        <div><strong>PA · NJ · DE</strong> licensed</div>
+        <div><strong>Since '02</strong> Settlement Master</div>
       </div>
     </div>
   </div>
@@ -744,8 +768,8 @@ a { color: inherit; }
 <section class="ledger" aria-labelledby="ledger-heading">
   <div class="ledger-strip">
     <div class="ledger-head">
-      <p>Recent verdicts &amp; settlements</p>
-      <h2 id="ledger-heading">A ledger, not a slogan.</h2>
+      <p>On the record</p>
+      <h2 id="ledger-heading">The verdicts are the record.</h2>
     </div>
     <div class="ledger-grid">
       <div class="verdict">
@@ -772,8 +796,8 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">Investigations</p>
     <div class="section-head">
-      <h2 id="investigations-heading">We don't write content.<br>We write the case file.</h2>
-      <p>Every article on this site is sourced from PennDOT crash data, Pennsylvania appellate decisions, the Vision Zero PHL dataset, the FELA statutes, or a verdict our attorneys argued. Each one is bylined by the partner whose desk the issue actually lands on. Read what your case will look like before you call.</p>
+      <h2 id="investigations-heading">Every article<br>is a case file.</h2>
+      <p>6 investigations. 6 bylines. Every one cites a verdict, a statute, or the docket.</p>
     </div>
 
     <div class="editorial-grid">
@@ -783,7 +807,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · PA Unified Judicial System · 73 verdicts</p>
           <h3>What a Pennsylvania jury actually awards for an I-95 multi-vehicle crash, 2018 to 2025.</h3>
-          <p>I pulled the verdict slips on every I-95 corridor multi-vehicle case that reached a Philadelphia County or Delaware County jury over the last seven years. The numbers don't tell the story carriers want you to believe.</p>
+          <p>I pulled every I-95 verdict slip from Philadelphia and Delaware County juries over 7 years. 73 cases. The pattern is on the docket.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/robert-e-mccann.png')" aria-hidden="true"></div>
             <div>
@@ -799,7 +823,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · PPD Crash Data · Vision Zero PHL · 41 fatalities</p>
           <h3>You were hit on Roosevelt Boulevard. Here's what to do before the adjuster calls.</h3>
-          <p>Roosevelt Boulevard accounts for one in eight pedestrian fatalities in Philadelphia. The first call after the EMTs leave is rarely your lawyer. Here's why it should be, and what to say if the carrier calls first.</p>
+          <p>Roosevelt Boulevard owns 1 in 8 pedestrian fatalities in Philadelphia. Your call order matters. Start here.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/thomas-j-omalley.webp')" aria-hidden="true"></div>
             <div>
@@ -815,7 +839,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · 45 U.S.C. § 51 · FELA case law</p>
           <h3>FELA, SEPTA, and Amtrak. Why rail worker injuries skip workers' comp.</h3>
-          <p>If you work for SEPTA, Amtrak, or Norfolk Southern and you got hurt on the job, your claim is not a workers' comp claim. It's a federal negligence case. The recovery ceiling is roughly three times higher, and the proof requirements are different.</p>
+          <p>SEPTA, Amtrak, Norfolk Southern. A hurt rail worker files federal negligence, not comp. The ceiling runs roughly 3x.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/michael-p-minuti.png')" aria-hidden="true"></div>
             <div>
@@ -831,7 +855,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · PA Superior · DE Supreme · 51 percent threshold</p>
           <h3>Your crash was on the Commodore Barry Bridge. Which state's law governs your claim?</h3>
-          <p>Pennsylvania uses a 51 percent modified comparative rule. Delaware applies pure comparative negligence. New Jersey runs its own modified rule with a verbal threshold. For a plaintiff who was 30 percent at fault, the difference is the entire case.</p>
+          <p>3 states. 3 comparative rules. For a plaintiff 30% at fault, the rule is the case.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/timothy-a-dillon.png')" aria-hidden="true"></div>
             <div>
@@ -847,7 +871,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · Uber rideshare policy · PA Insurance Department</p>
           <h3>You got hit by an Uber in University City. Three insurance tiers. Here's the order to call.</h3>
-          <p>Uber carries three different insurance policies depending on whether the driver is offline, waiting for a ride, or carrying a passenger. The tier the carrier quotes on the phone is usually not the tier that applies to you.</p>
+          <p>3 Uber tiers: offline, waiting, carrying. The tier they quote is rarely the one that applies to you.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/david-s-bigelow.png')" aria-hidden="true"></div>
             <div>
@@ -863,7 +887,7 @@ a { color: inherit; }
         <div class="article-card-body">
           <p class="article-source">Source · PA Supreme · MCARE Act reports · $2.1B impact</p>
           <h3>Pennsylvania's MCARE Act at twenty. What the medical malpractice cap has cost plaintiffs.</h3>
-          <p>The Medical Care Availability and Reduction of Error Act capped damages and reorganized how PA hospitals carry coverage. Two decades of data now show a clear pattern of what plaintiffs lost and what carriers gained.</p>
+          <p>20 years of MCARE data. $2.1B in impact. The pattern reads in the verdict slips.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/mark-jaffe.png')" aria-hidden="true"></div>
             <div>
@@ -882,45 +906,45 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">Practice</p>
     <div class="section-head">
-      <h2 id="practice-heading">Six lanes.<br>Every one of them tried.</h2>
-      <p>We do not run a settlement mill. The cases below are the lanes our partners have taken to verdict in Philadelphia, Delaware County, Montgomery County, the Court of Common Pleas of Camden County, and the Delaware Superior Court.</p>
+      <h2 id="practice-heading">Six lanes.<br>Every one tried.</h2>
+      <p>Argued to juries in Philadelphia, Delaware, Montgomery, Camden, and the Delaware Superior.</p>
     </div>
     <div class="practice-grid">
       <a class="practice" href="#car">
         <div class="practice-num">01</div>
         <h3>Car &amp; truck<br>accidents</h3>
-        <p>I-95 corridor multi-vehicle, Roosevelt Boulevard pedestrian, Schuylkill Expressway commercial truck. The crashes that turn into the longest verdicts.</p>
-        <div class="practice-cta">Read more</div>
+        <p>I-95 multi-vehicle. Roosevelt Boulevard pedestrian. Schuylkill commercial truck. The crashes that build the longest verdicts.</p>
+        <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#construction">
         <div class="practice-num">02</div>
         <h3>Construction<br>&amp; FELA</h3>
-        <p>Scaffold collapse, multi-employer doctrine, refinery accidents, Amtrak / SEPTA / Norfolk Southern rail worker claims under FELA.</p>
-        <div class="practice-cta">Read more</div>
+        <p>Scaffold collapse. Multi-employer doctrine. Refinery floors. Amtrak, SEPTA, and Norfolk Southern rail workers under FELA.</p>
+        <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#medmal">
         <div class="practice-num">03</div>
         <h3>Medical<br>malpractice</h3>
-        <p>MCARE Act litigation, informed consent doctrine, hospital and physician extender liability across PA and NJ.</p>
-        <div class="practice-cta">Read more</div>
+        <p>MCARE Act litigation. Informed consent. Hospital and physician extender liability across PA and NJ.</p>
+        <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#premises">
         <div class="practice-num">04</div>
         <h3>Premises<br>liability</h3>
-        <p>Multi-family housing, commercial property, slip and fall under PA's modified comparative regime. Evidence preservation matters early.</p>
-        <div class="practice-cta">Read more</div>
+        <p>Multi-family housing. Commercial property. Slip and fall under PA's modified comparative rule. Evidence is won in the first 72 hours.</p>
+        <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#products">
         <div class="practice-num">05</div>
         <h3>Products<br>liability</h3>
-        <p>Design defect versus warning claims, mass tort consolidation in the Eastern District of Pennsylvania, vehicle and industrial equipment.</p>
-        <div class="practice-cta">Read more</div>
+        <p>Design defect. Failure to warn. Mass tort consolidation in the Eastern District of Pennsylvania. Vehicle and industrial equipment.</p>
+        <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#dramshop">
         <div class="practice-num">06</div>
         <h3>Dram shop<br>&amp; liquor liability</h3>
-        <p>Center City Philadelphia bar overserves, restaurant venue claims, third-party drunk driver fatalities under PA's dram shop statute.</p>
-        <div class="practice-cta">Read more</div>
+        <p>Center City overserve cases. Restaurant venue claims. Third-party drunk driver fatalities under PA's dram shop statute.</p>
+        <div class="practice-cta">View cases</div>
       </a>
     </div>
   </div>
@@ -929,28 +953,26 @@ a { color: inherit; }
 <section class="eeat" id="approach" aria-labelledby="eeat-heading">
   <div class="section-inner">
     <p class="section-eyebrow">Why this firm</p>
-    <div class="eeat-grid">
-      <div>
-        <h2 id="eeat-heading" style="font-family:var(--display); font-size:clamp(36px,6vw,72px); line-height:0.95; margin:0; letter-spacing:-0.01em; font-weight:400; color:var(--ink)">McCann prepares every case like it's going to trial.</h2>
-        <p style="margin:24px 0 0; max-width:520px; font-size:17px; line-height:1.55; color:var(--slate-700)">Eight attorneys. Three state bars. Four offices. A founder appointed Settlement Master in Philadelphia for over two decades. A partner who clerked at the Pennsylvania Supreme Court. The infrastructure for a small firm. The verdicts of a much larger one.</p>
+    <div>
+      <h2 id="eeat-heading" style="font-family:var(--display); font-size:clamp(40px,7vw,88px); line-height:0.95; margin:0; letter-spacing:-0.01em; font-weight:700; color:var(--ink); max-width:760px">Every case<br>prepared for trial.</h2>
+      <p style="margin:24px 0 0; max-width:640px; font-size:clamp(17px,1.6vw,20px); line-height:1.55; color:var(--slate-700)">8 attorneys. Licensed in PA, NJ, DE. 4 offices. Founder is a court-appointed Settlement Master since 2002. A partner clerked the PA Supreme Court.</p>
+    </div>
+    <div class="eeat-bignum">
+      <div class="row">
+        <div class="num">25</div>
+        <p class="label">Years on the docket. Pennsylvania, New Jersey, Delaware.</p>
       </div>
-      <div class="eeat-pillars">
-        <div>
-          <div class="eeat-pillar-num">25</div>
-          <p class="eeat-pillar-label">Years on the docket since 1999</p>
-        </div>
-        <div>
-          <div class="eeat-pillar-num">$200M+</div>
-          <p class="eeat-pillar-label">Recovered for clients across PA, NJ, DE</p>
-        </div>
-        <div>
-          <div class="eeat-pillar-num">17</div>
-          <p class="eeat-pillar-label">Verdicts on the firm record above $980K</p>
-        </div>
-        <div>
-          <div class="eeat-pillar-num">8</div>
-          <p class="eeat-pillar-label">Attorneys, all named, all with bylines</p>
-        </div>
+      <div class="row">
+        <div class="num">$200M+</div>
+        <p class="label">Recovered for clients across the tri-state corridor.</p>
+      </div>
+      <div class="row">
+        <div class="num">17</div>
+        <p class="label">Verdicts above $980K. Every one on the public docket.</p>
+      </div>
+      <div class="row">
+        <div class="num">8</div>
+        <p class="label">Attorneys. Every one named. Every one bylined.</p>
       </div>
     </div>
   </div>
@@ -958,36 +980,36 @@ a { color: inherit; }
 
 <section class="approach section dark" id="how" aria-labelledby="how-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">From first call to verdict</p>
+    <p class="section-eyebrow">First call to verdict</p>
     <div class="section-head">
-      <h2 id="how-heading">How a McCann case actually moves.</h2>
-      <p>Five steps. Same five steps for every case we take, whether it's a fender-bender claim or a fatal scaffold collapse. The reason carriers know who we are is because they know how we work.</p>
+      <h2 id="how-heading">How a case<br>actually moves.</h2>
+      <p>5 steps. Same 5 for every case. The defense bar knows the order.</p>
     </div>
     <div class="approach-grid">
       <div class="approach-step">
         <span class="approach-num">Step 1</span>
         <h3>Intake</h3>
-        <p>You call. A real attorney returns the call within the business day. We ask for the police report, the EMT run sheet, and the names of every witness on scene.</p>
+        <p>You call. An attorney calls you back the same day. Police report, EMT run sheet, every witness on scene.</p>
       </div>
       <div class="approach-step">
         <span class="approach-num">Step 2</span>
         <h3>Reconstruction</h3>
-        <p>Independent crash reconstruction, on-site photography, scene measurement. We do this before the carrier ever opens its file.</p>
+        <p>Independent crash reconstruction. On-site photography. Scene measurement. Locked in before the adjuster opens a file.</p>
       </div>
       <div class="approach-step">
         <span class="approach-num">Step 3</span>
         <h3>Demand</h3>
-        <p>We file a documented demand with the carrier. It includes medical specials, future treatment forecasts, and the case theory.</p>
+        <p>A documented demand goes out. Medical specials. Future treatment. The case theory in one packet.</p>
       </div>
       <div class="approach-step">
         <span class="approach-num">Step 4</span>
         <h3>Negotiation</h3>
-        <p>The carrier comes back. If the offer matches the case, you decide whether to take it. If it doesn't, we file.</p>
+        <p>The other side responds. If the offer matches the case, you decide. If it falls short, the complaint gets drafted.</p>
       </div>
       <div class="approach-step">
         <span class="approach-num">Step 5</span>
         <h3>Trial</h3>
-        <p>The case goes to a Philadelphia or county jury. Our partners have closed in front of every Common Pleas judge in the city.</p>
+        <p>The case goes to a jury. Our partners have closed in front of every Common Pleas judge in the city.</p>
       </div>
     </div>
   </div>
@@ -997,8 +1019,8 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">The bench</p>
     <div class="section-head">
-      <h2 id="bench-heading">The lawyers who try the cases.<br>The lawyers who write the articles.</h2>
-      <p>Every byline above belongs to one of these attorneys. Every case is staffed by them. No content farm, no ghost writers, no associates writing under partner names.</p>
+      <h2 id="bench-heading">They try the cases.<br>They write the articles.</h2>
+      <p>The lawyer who tries your case is the lawyer who writes about it.</p>
     </div>
     <div class="bench-grid">
       <a class="bench-card" href="#robert">
@@ -1006,7 +1028,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Robert E.<br>McCann</h3>
           <p class="bench-role">Founding Member</p>
-          <p>Court-appointed Settlement Master. Super Lawyers since 2007.</p>
+          <p>Court-appointed Settlement Master since 2002. Super Lawyers since 2007.</p>
         </div>
       </a>
       <a class="bench-card" href="#timothy">
@@ -1014,7 +1036,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Timothy A.<br>Dillon</h3>
           <p class="bench-role">Partner · Delaware</p>
-          <p>PA + NJ + DE bars. Tri-state corridor authority.</p>
+          <p>Licensed in PA, NJ, DE. The tri-state corridor.</p>
         </div>
       </a>
       <a class="bench-card" href="#mark">
@@ -1022,7 +1044,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Mark<br>Jaffe</h3>
           <p class="bench-role">Partner · Appellate</p>
-          <p>Former PA Supreme Court clerk. NTL Top 100.</p>
+          <p>PA Supreme Court clerk, 1995. NTL Top 100.</p>
         </div>
       </a>
       <a class="bench-card" href="#patrick">
@@ -1030,7 +1052,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Patrick C.<br>Lamb</h3>
           <p class="bench-role">Partner · Trial</p>
-          <p>Super Lawyers since 2008. Closing-argument specialist.</p>
+          <p>Super Lawyers since 2008. Closes the case to the jury.</p>
         </div>
       </a>
       <a class="bench-card" href="#thomas">
@@ -1038,7 +1060,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Thomas J.<br>O'Malley</h3>
           <p class="bench-role">Attorney · Resources</p>
-          <p>Philly neighborhoods voice. Civic ties throughout.</p>
+          <p>The Philly neighborhood voice. Fox Chase, Lawncrest, Burholme.</p>
         </div>
       </a>
       <a class="bench-card" href="#david">
@@ -1046,7 +1068,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">David S.<br>Bigelow</h3>
           <p class="bench-role">Attorney · Civic</p>
-          <p>NTL Top 40 Under 40. Ridehail and commuter law.</p>
+          <p>NTL Top 40 Under 40. Uber, Lyft, scooter, SEPTA.</p>
         </div>
       </a>
       <a class="bench-card" href="#michael">
@@ -1054,7 +1076,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Michael P.<br>Minuti</h3>
           <p class="bench-role">Attorney · Industry</p>
-          <p>Construction, FELA, refinery. Wake Forest Trial Bar.</p>
+          <p>Construction. FELA. Refinery. Wake Forest Trial Bar.</p>
         </div>
       </a>
     </div>
@@ -1064,8 +1086,8 @@ a { color: inherit; }
 <section class="cta-block" id="contact">
   <div class="cta-inner">
     <div>
-      <h2>Talk to a trial lawyer tonight.</h2>
-      <p>Twenty-four hours. Free. Confidential. No fee unless we win. The conversation is with an attorney, not an intake agent.</p>
+      <h2>One call.<br>A real lawyer.</h2>
+      <p>24/7. Free. Confidential. No fee unless we win.</p>
     </div>
     <div class="cta-actions">
       <a class="btn btn-dark" href="tel:+12155698488">Call 215.569.8488</a>
@@ -1080,7 +1102,7 @@ a { color: inherit; }
   <div class="footer-grid">
     <div class="footer-col">
       <img src="logos/mccann-logo-dark.png" alt="McCann Dillon Jaffe &amp; Lamb" style="height:36px; width:auto; margin-bottom:20px; display:block">
-      <p style="color:rgba(255,255,255,0.92); font-size:15px; max-width:340px; line-height:1.55">A Pennsylvania trial firm. Twenty-five years. Three state bars. The infrastructure to compound the verdicts that built it.</p>
+      <p style="color:rgba(255,255,255,0.92); font-size:15px; max-width:340px; line-height:1.55">A Pennsylvania trial firm. 25 years on the docket. Licensed in PA, NJ, DE. The verdicts are the record.</p>
     </div>
     <div class="footer-col">
       <h4>Philadelphia HQ</h4>
@@ -1103,7 +1125,7 @@ a { color: inherit; }
   </div>
   <div class="footer-bottom">
     <div>© <strong>McCann Dillon Jaffe &amp; Lamb, LLC</strong> · Licensed in PA, NJ, DE</div>
-    <div>Prior results do not guarantee a similar outcome. This site is attorney advertising.</div>
+    <div>Attorney advertising in PA, NJ, DE. Past results don't promise the next one.</div>
   </div>
 </footer>
 
