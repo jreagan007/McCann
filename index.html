@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>McCann Dillon Jaffe &amp; Lamb · Philadelphia Trial Lawyers · 25 Years on the Docket</title>
-<meta name="description" content="A Pennsylvania trial firm. Every case prepared for verdict. $200M+ recovered across PA, NJ, DE. 17 verdicts on the public docket. Talk to a trial lawyer 24/7.">
+<title>Philadelphia Personal Injury Lawyer · McCann Dillon Jaffe &amp; Lamb · 25 Years</title>
+<meta name="description" content="Philadelphia personal injury lawyer with 25 years on the docket. Car accident, truck accident, and medical malpractice trial work. $200M+ recovered. PA, NJ, DE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
         {"@type": "PostalAddress", "addressLocality": "Jenkintown", "addressRegion": "PA", "addressCountry": "US"}
       ],
       "founder": {"@type": "Person", "@id": "https://www.mccanninjurylaw.com/our-attorneys/robert-e-mccann/#person"},
-      "knowsAbout": ["personal injury", "trial practice", "FELA", "professional liability", "premises liability", "products liability", "medical malpractice", "construction accidents", "automobile accidents"],
+      "knowsAbout": ["philadelphia personal injury lawyer", "philadelphia car accident lawyer", "philadelphia truck accident lawyer", "philadelphia medical malpractice lawyer", "philadelphia wrongful death lawyer", "philadelphia slip and fall lawyer", "philadelphia workers compensation lawyer", "personal injury lawyer near me"],
       "award": ["Super Lawyers", "Million Dollar Advocates Forum", "Martindale AV", "National Trial Lawyers Top 100"]
     },
     {
@@ -38,7 +38,7 @@
       "jobTitle": "Founding Member",
       "worksFor": {"@id": "https://www.mccanninjurylaw.com/#firm"},
       "alumniOf": ["Widener University School of Law", "Swarthmore College"],
-      "knowsAbout": ["Pennsylvania personal injury law", "dram shop", "professional liability", "FELA"]
+      "knowsAbout": ["Pennsylvania personal injury law", "philadelphia wrongful death lawyer", "dram shop", "professional liability", "FELA"]
     }
   ]
 }
@@ -67,16 +67,16 @@
   --content-pad: clamp(20px, 5vw, 64px);
 }
 
-/* ─── E-E-A-T big-number row override (Wave 2 layout fix) ─── */
+/* ─── E-E-A-T big-number rows (alternating treatments) ─── */
 .eeat-bignum {
-  display: grid; gap: 48px;
+  display: grid; gap: 0;
   grid-template-columns: 1fr;
   margin-top: 56px;
 }
 .eeat-bignum .row {
   display: grid; grid-template-columns: 1fr;
   gap: 16px; align-items: baseline;
-  padding-top: 28px;
+  padding: 36px 0;
   border-top: 1px solid rgba(11,37,69,0.18);
 }
 .eeat-bignum .row .num {
@@ -93,6 +93,50 @@
 @media (min-width: 768px) {
   .eeat-bignum .row { grid-template-columns: 1.1fr 1fr; gap: 40px; }
   .eeat-bignum .row .label { padding-bottom: 18px; }
+}
+
+/* row 2 inverted: brass numeral on navy block, breaks out to max-width edge */
+.eeat-bignum .row.invert {
+  background: var(--navy); color: var(--paper);
+  margin: 0 calc(var(--content-pad) * -1);
+  padding: 56px var(--content-pad);
+  border-top: none;
+  position: relative;
+}
+.eeat-bignum .row.invert::before {
+  content: ""; position: absolute; top: 0; left: var(--content-pad); right: var(--content-pad);
+  height: 2px; background: var(--brass);
+}
+.eeat-bignum .row.invert .num { color: var(--brass); }
+.eeat-bignum .row.invert .label { color: rgba(255,255,255,0.85); }
+
+/* row 3 verdicts: brass range bar from $980K to $9.5M */
+.eeat-range-wrap { margin-top: 14px; max-width: 360px; position: relative; padding-bottom: 22px; }
+.eeat-range-bar { height: 6px; background: linear-gradient(90deg, var(--brass) 0%, var(--brass-bright) 100%); }
+.eeat-range-tick {
+  position: absolute; bottom: 0; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700;
+}
+.eeat-range-tick.lo { left: 0; }
+.eeat-range-tick.hi { right: 0; }
+
+/* row 4 attorneys: overlapped circular avatar row */
+.eeat-avatars { display: flex; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+.eeat-avatars .av {
+  width: 44px; height: 44px; border-radius: 50%;
+  background-size: cover; background-position: top center;
+  border: 2px solid var(--newsprint);
+  margin-left: -10px;
+  box-shadow: 0 2px 6px rgba(11,37,69,0.18);
+  filter: grayscale(0.35) contrast(1.05);
+  flex: 0 0 auto;
+}
+.eeat-avatars .av:first-child { margin-left: 0; }
+.eeat-avatars .av-meta {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--slate-700); font-weight: 700;
+  margin-left: 16px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -293,18 +337,27 @@ a { color: inherit; }
   border-color: var(--brass); color: var(--brass-bright); outline: none;
 }
 .hero-trustrow {
-  display: grid; gap: 16px 32px;
+  display: grid; gap: 24px 32px;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 36px;
   border-top: 1px solid rgba(232,162,44,0.25);
+}
+.hero-trustrow .cell {
+  display: flex; flex-direction: column; gap: 6px;
+  border-left: 2px solid var(--brass);
+  padding-left: 14px;
+}
+.hero-trustrow .cell .lead {
+  font-family: var(--display);
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1; letter-spacing: -0.01em;
+  color: var(--brass-bright); font-weight: 700;
+}
+.hero-trustrow .cell .ctx {
   font-family: var(--mono); font-size: 11px;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.78); line-height: 1.4;
 }
-.hero-trustrow div {
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-trustrow strong { color: var(--brass-bright); font-weight: 700; }
 @media (min-width: 768px) {
   .hero-trustrow { grid-template-columns: repeat(4, 1fr); }
 }
@@ -690,6 +743,265 @@ a { color: inherit; }
   outline-offset: 2px;
 }
 
+/* ─── Hero intake form ───────────────────── */
+.hero-inner.with-form {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .hero-inner.with-form {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 64px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+.intake {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 28px 24px 24px;
+  border-top: 4px solid var(--brass);
+  box-shadow: 0 24px 60px rgba(7,26,51,0.35);
+  display: grid; gap: 16px;
+}
+.intake h2 {
+  font-family: var(--display);
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1; margin: 0; font-weight: 400;
+  color: var(--navy); letter-spacing: -0.005em;
+}
+.intake-eyebrow {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700; margin: 0;
+}
+.intake-field { display: grid; gap: 6px; }
+.intake-field label {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--slate-700); font-weight: 700;
+}
+.intake-field input,
+.intake-field textarea {
+  font-family: var(--body); font-size: 16px;
+  padding: 14px 14px;
+  min-height: 56px;
+  border: 1px solid rgba(11,37,69,0.25);
+  background: var(--newsprint-50);
+  color: var(--ink);
+  width: 100%;
+}
+.intake-field textarea {
+  min-height: 96px; resize: vertical; line-height: 1.45;
+}
+.intake-field input:focus,
+.intake-field textarea:focus {
+  outline: 3px solid var(--brass-bright);
+  outline-offset: 1px;
+  border-color: var(--brass);
+  background: var(--paper);
+}
+.intake .btn-primary {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+.intake-fineprint {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--slate-700); margin: 4px 0 0; text-align: center;
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── Press strip ───────────────────────── */
+.press-strip {
+  background: var(--newsprint);
+  border-bottom: 1px solid rgba(11,37,69,0.08);
+  padding: 32px var(--content-pad);
+}
+.press-inner {
+  max-width: var(--content-max); margin: 0 auto;
+  display: grid; gap: 20px;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.press-eyebrow {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700;
+}
+.press-eyebrow::before {
+  content: ""; display: inline-block;
+  width: 24px; height: 1px; background: var(--navy);
+  vertical-align: middle; margin-right: 14px;
+}
+.press-marks {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.press-mark {
+  font-family: var(--display);
+  font-size: clamp(18px, 2vw, 22px);
+  letter-spacing: -0.005em;
+  color: var(--slate-700);
+  text-align: center; padding: 8px 4px;
+  border: 1px solid rgba(11,37,69,0.12);
+  background: var(--paper);
+  text-transform: uppercase;
+}
+.press-mark.serif {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic; font-weight: 700;
+  letter-spacing: 0;
+}
+.press-mark.broadcast {
+  font-family: var(--body); font-weight: 900;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 600px) {
+  .press-marks { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .press-inner { grid-template-columns: auto 1fr; gap: 40px; }
+  .press-marks { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ─── Testimonials ──────────────────────── */
+.testimonials-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: 1fr;
+}
+.testimonial {
+  background: var(--paper);
+  border: 1px solid rgba(11,37,69,0.1);
+  padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.testimonial blockquote {
+  margin: 0; font-size: 17px; line-height: 1.55;
+  color: var(--ink); font-weight: 400;
+}
+.testimonial blockquote::before {
+  content: "\201C"; color: var(--brass);
+  font-family: var(--display); font-size: 56px;
+  line-height: 0; vertical-align: -16px; margin-right: 4px;
+}
+.testimonial-foot {
+  display: flex; align-items: center; gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(11,37,69,0.08);
+  margin-top: auto;
+}
+.testimonial-avatar {
+  width: 48px; height: 48px;
+  background: var(--navy);
+  color: var(--brass);
+  font-family: var(--display); font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  flex: 0 0 auto;
+}
+.testimonial-meta { line-height: 1.35; }
+.testimonial-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+.testimonial-case {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--slate); margin-top: 2px;
+}
+@media (min-width: 700px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ─── Offices ───────────────────────────── */
+.offices-map {
+  position: relative;
+  background: var(--navy-deep);
+  aspect-ratio: 16/9;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(232,162,44,0.25);
+}
+.offices-map img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.offices-map::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(11,37,69,0) 60%, rgba(7,26,51,0.55) 100%);
+}
+.offices-legend {
+  display: grid; gap: 12px 24px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 0 32px;
+  padding: 18px 22px;
+  background: var(--navy);
+  border: 1px solid rgba(232,162,44,0.25);
+  border-top: none;
+}
+.offices-legend .item {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85); font-weight: 600;
+}
+.offices-legend .pin {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--brass); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-size: 13px; font-weight: 700;
+  flex: 0 0 auto;
+}
+@media (min-width: 768px) {
+  .offices-legend { grid-template-columns: repeat(4, 1fr); }
+}
+.offices-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: 1fr;
+}
+.office-card {
+  background: var(--paper);
+  border: 1px solid rgba(11,37,69,0.1);
+  padding: 24px 22px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.office-card h3 {
+  font-family: var(--display);
+  font-size: 24px; line-height: 1; margin: 0;
+  font-weight: 400; color: var(--navy);
+}
+.office-card p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--slate-700); }
+.office-card a {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700; text-decoration: none;
+}
+.office-card a:hover { color: var(--ink); }
+.office-card .office-phone {
+  font-family: var(--mono); font-size: 15px; font-weight: 700;
+  color: var(--navy); letter-spacing: 0.04em; text-decoration: none;
+}
+@media (min-width: 600px) { .offices-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .offices-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ─── 24/7 phone strip ──────────────────── */
+.phone-strip {
+  background: var(--navy); color: var(--brass-bright);
+  padding: 18px var(--content-pad);
+  text-align: center;
+  font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 600;
+  border-top: 1px solid rgba(232,162,44,0.25);
+}
+.phone-strip a { color: var(--brass-bright); text-decoration: none; }
+.phone-strip a:hover { color: var(--paper); }
+.phone-strip .dot {
+  display: inline-block; margin: 0 10px;
+  color: var(--brass); opacity: 0.6;
+}
+
 /* ─── Reduced motion ─────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto; }
@@ -746,7 +1058,7 @@ a { color: inherit; }
 
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-inner">
+  <div class="hero-inner with-form">
     <div>
       <p class="hero-eyebrow">Philadelphia · Wilmington · Haddon Township · Jenkintown</p>
       <h1 id="hero-heading">25 Years.<br>One Record.<br><strong>One Call.</strong></h1>
@@ -756,10 +1068,68 @@ a { color: inherit; }
         <a class="btn btn-ghost" href="#investigations">Read the investigations</a>
       </div>
       <div class="hero-trustrow">
-        <div><strong>$200M+</strong> recovered</div>
-        <div><strong>17</strong> verdicts on record</div>
-        <div><strong>PA · NJ · DE</strong> licensed</div>
-        <div><strong>Since '02</strong> Settlement Master</div>
+        <div class="cell">
+          <span class="lead">$9.5M</span>
+          <span class="ctx">Latest verdict · Construction · Phila Co 2024</span>
+        </div>
+        <div class="cell">
+          <span class="lead">$200M+</span>
+          <span class="ctx">Recovered · 17 verdicts above $980K</span>
+        </div>
+        <div class="cell">
+          <span class="lead">NTL Top 100</span>
+          <span class="ctx">Super Lawyers · Martindale AV · Million Dollar Advocates</span>
+        </div>
+        <div class="cell">
+          <span class="lead">PA · NJ · DE</span>
+          <span class="ctx">8 trial lawyers · 4 offices · Settlement Master since 2002</span>
+        </div>
+      </div>
+    </div>
+    <form class="intake" action="#" method="post" aria-labelledby="intake-heading">
+      <p class="intake-eyebrow">Free consultation</p>
+      <h2 id="intake-heading">Tell us what happened.</h2>
+      <div class="intake-field">
+        <label for="intake-name">Your name</label>
+        <input type="text" id="intake-name" name="name" autocomplete="name" required placeholder="First and last">
+      </div>
+      <div class="intake-field">
+        <label for="intake-phone">Phone</label>
+        <input type="tel" id="intake-phone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="(215) 555-0100">
+      </div>
+      <div class="intake-field">
+        <label for="intake-what">What happened</label>
+        <textarea id="intake-what" name="what-happened" required placeholder="A few sentences. Date, place, injury."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Get my case reviewed</button>
+      <p class="intake-fineprint">24/7 · Free · Confidential · No fee unless we win</p>
+    </form>
+  </div>
+</section>
+
+<section class="press-strip" aria-label="Featured in">
+  <div class="press-inner">
+    <p class="press-eyebrow">As reported by</p>
+    <div class="press-marks" role="list">
+      <div class="press-mark serif" role="listitem" aria-label="The Philadelphia Inquirer">
+        <span class="sr-only">The Philadelphia Inquirer</span>
+        <span aria-hidden="true">The Inquirer</span>
+      </div>
+      <div class="press-mark serif" role="listitem" aria-label="The Legal Intelligencer">
+        <span class="sr-only">The Legal Intelligencer</span>
+        <span aria-hidden="true">Legal Intelligencer</span>
+      </div>
+      <div class="press-mark" role="listitem" aria-label="Philadelphia Magazine">
+        <span class="sr-only">Philadelphia Magazine</span>
+        <span aria-hidden="true">Phila. Mag</span>
+      </div>
+      <div class="press-mark broadcast" role="listitem" aria-label="6abc Action News">
+        <span class="sr-only">6abc Action News</span>
+        <span aria-hidden="true">6abc</span>
+      </div>
+      <div class="press-mark" role="listitem" aria-label="Super Lawyers">
+        <span class="sr-only">Super Lawyers</span>
+        <span aria-hidden="true">Super Lawyers</span>
       </div>
     </div>
   </div>
@@ -768,8 +1138,8 @@ a { color: inherit; }
 <section class="ledger" aria-labelledby="ledger-heading">
   <div class="ledger-strip">
     <div class="ledger-head">
-      <p>On the record</p>
-      <h2 id="ledger-heading">The verdicts are the record.</h2>
+      <p>On the docket</p>
+      <h2 id="ledger-heading">Recent results.</h2>
     </div>
     <div class="ledger-grid">
       <div class="verdict">
@@ -796,8 +1166,8 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">Investigations</p>
     <div class="section-head">
-      <h2 id="investigations-heading">Every article<br>is a case file.</h2>
-      <p>6 investigations. 6 bylines. Every one cites a verdict, a statute, or the docket.</p>
+      <h2 id="investigations-heading">Latest investigations.</h2>
+      <p>6 reports. 6 bylines. Each one cites a verdict, a statute, or the docket.</p>
     </div>
 
     <div class="editorial-grid">
@@ -806,7 +1176,7 @@ a { color: inherit; }
         <div class="article-card-image" style="background-image:url('images/editorial/article-i95-verdicts.png')" role="img" aria-label="I-95 corridor"></div>
         <div class="article-card-body">
           <p class="article-source">Source · PA Unified Judicial System · 73 verdicts</p>
-          <h3>What a Pennsylvania jury actually awards for an I-95 multi-vehicle crash, 2018 to 2025.</h3>
+          <h3>I pulled 7 years of I-95 verdict slips. Here's what a Pennsylvania jury actually awards for a multi-vehicle crash.</h3>
           <p>I pulled every I-95 verdict slip from Philadelphia and Delaware County juries over 7 years. 73 cases. The pattern is on the docket.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/robert-e-mccann.png')" aria-hidden="true"></div>
@@ -854,7 +1224,7 @@ a { color: inherit; }
         <div class="article-card-image" style="background-image:url('images/editorial/article-commodore-barry-bridge.png')" role="img" aria-label="Commodore Barry Bridge"></div>
         <div class="article-card-body">
           <p class="article-source">Source · PA Superior · DE Supreme · 51 percent threshold</p>
-          <h3>Your crash was on the Commodore Barry Bridge. Which state's law governs your claim?</h3>
+          <h3>A crash on the Commodore Barry Bridge. Which state's law governs the claim.</h3>
           <p>3 states. 3 comparative rules. For a plaintiff 30% at fault, the rule is the case.</p>
           <div class="byline">
             <div class="byline-avatar" style="background-image:url('images/attorneys/timothy-a-dillon.png')" aria-hidden="true"></div>
@@ -906,32 +1276,32 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">Practice</p>
     <div class="section-head">
-      <h2 id="practice-heading">Six lanes.<br>Every one tried.</h2>
+      <h2 id="practice-heading">Practice areas.</h2>
       <p>Argued to juries in Philadelphia, Delaware, Montgomery, Camden, and the Delaware Superior.</p>
     </div>
     <div class="practice-grid">
       <a class="practice" href="#car">
         <div class="practice-num">01</div>
         <h3>Car &amp; truck<br>accidents</h3>
-        <p>I-95 multi-vehicle. Roosevelt Boulevard pedestrian. Schuylkill commercial truck. The crashes that build the longest verdicts.</p>
+        <p>Philadelphia car accident and truck accident cases. I-95 multi-vehicle. Roosevelt Boulevard pedestrian. Schuylkill commercial truck. The crashes that build the longest verdicts.</p>
         <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#construction">
         <div class="practice-num">02</div>
         <h3>Construction<br>&amp; FELA</h3>
-        <p>Scaffold collapse. Multi-employer doctrine. Refinery floors. Amtrak, SEPTA, and Norfolk Southern rail workers under FELA.</p>
+        <p>Philadelphia workers compensation third-party claims. Scaffold collapse. Multi-employer doctrine. Refinery floors. Amtrak, SEPTA, and Norfolk Southern rail workers under FELA.</p>
         <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#medmal">
         <div class="practice-num">03</div>
         <h3>Medical<br>malpractice</h3>
-        <p>MCARE Act litigation. Informed consent. Hospital and physician extender liability across PA and NJ.</p>
+        <p>Philadelphia medical malpractice cases. MCARE Act litigation. Informed consent. Hospital and physician extender liability across PA and NJ.</p>
         <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#premises">
         <div class="practice-num">04</div>
         <h3>Premises<br>liability</h3>
-        <p>Multi-family housing. Commercial property. Slip and fall under PA's modified comparative rule. Evidence is won in the first 72 hours.</p>
+        <p>Philadelphia slip and fall cases. Multi-family housing. Commercial property. PA's modified comparative rule. Evidence is won in the first 72 hours.</p>
         <div class="practice-cta">View cases</div>
       </a>
       <a class="practice" href="#products">
@@ -950,11 +1320,53 @@ a { color: inherit; }
   </div>
 </section>
 
-<section class="eeat" id="approach" aria-labelledby="eeat-heading">
+<section class="section cream" id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Clients</p>
+    <div class="section-head">
+      <h2 id="testimonials-heading">In their own words.</h2>
+      <p>Three clients. Three outcomes. Names shortened for privacy.</p>
+    </div>
+    <div class="testimonials-grid">
+      <figure class="testimonial">
+        <blockquote>They prepared the case for trial from day one. The hospital settled in week 12.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-avatar" aria-hidden="true">MS</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Maria S., Philadelphia</div>
+            <div class="testimonial-case">Medical Malpractice</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>Robert handled my scaffold case personally. Got the answer I needed in 4 weeks.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-avatar" aria-hidden="true">TK</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Tom K., Wilmington</div>
+            <div class="testimonial-case">Construction</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>After the crash, I could barely think. They brought the experts. They did the work.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-avatar" aria-hidden="true">JR</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Janet R., Haddon Township</div>
+            <div class="testimonial-case">Auto</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="eeat" id="why" aria-labelledby="eeat-heading">
   <div class="section-inner">
     <p class="section-eyebrow">Why this firm</p>
     <div>
-      <h2 id="eeat-heading" style="font-family:var(--display); font-size:clamp(40px,7vw,88px); line-height:0.95; margin:0; letter-spacing:-0.01em; font-weight:700; color:var(--ink); max-width:760px">Every case<br>prepared for trial.</h2>
+      <h2 id="eeat-heading" style="font-family:var(--display); font-size:clamp(40px,7vw,88px); line-height:0.95; margin:0; letter-spacing:-0.01em; font-weight:700; color:var(--ink); max-width:760px">Prepared for trial<br>from day one.</h2>
       <p style="margin:24px 0 0; max-width:640px; font-size:clamp(17px,1.6vw,20px); line-height:1.55; color:var(--slate-700)">8 attorneys. Licensed in PA, NJ, DE. 4 offices. Founder is a court-appointed Settlement Master since 2002. A partner clerked the PA Supreme Court.</p>
     </div>
     <div class="eeat-bignum">
@@ -962,54 +1374,39 @@ a { color: inherit; }
         <div class="num">25</div>
         <p class="label">Years on the docket. Pennsylvania, New Jersey, Delaware.</p>
       </div>
-      <div class="row">
+      <div class="row invert">
         <div class="num">$200M+</div>
-        <p class="label">Recovered for clients across the tri-state corridor.</p>
+        <div>
+          <p class="label">Recovered for clients across the tri-state corridor.</p>
+        </div>
       </div>
       <div class="row">
         <div class="num">17</div>
-        <p class="label">Verdicts above $980K. Every one on the public docket.</p>
+        <div>
+          <p class="label">Verdicts above $980K. All on the public docket.</p>
+          <div class="eeat-range-wrap" aria-label="Verdict range from 980 thousand to 9.5 million dollars">
+            <div class="eeat-range-bar"></div>
+            <span class="eeat-range-tick lo">$980K</span>
+            <span class="eeat-range-tick hi">$9.5M</span>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="num">8</div>
-        <p class="label">Attorneys. Every one named. Every one bylined.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="approach section dark" id="how" aria-labelledby="how-heading">
-  <div class="section-inner">
-    <p class="section-eyebrow">First call to verdict</p>
-    <div class="section-head">
-      <h2 id="how-heading">How a case<br>actually moves.</h2>
-      <p>5 steps. Same 5 for every case. The defense bar knows the order.</p>
-    </div>
-    <div class="approach-grid">
-      <div class="approach-step">
-        <span class="approach-num">Step 1</span>
-        <h3>Intake</h3>
-        <p>You call. An attorney calls you back the same day. Police report, EMT run sheet, every witness on scene.</p>
-      </div>
-      <div class="approach-step">
-        <span class="approach-num">Step 2</span>
-        <h3>Reconstruction</h3>
-        <p>Independent crash reconstruction. On-site photography. Scene measurement. Locked in before the adjuster opens a file.</p>
-      </div>
-      <div class="approach-step">
-        <span class="approach-num">Step 3</span>
-        <h3>Demand</h3>
-        <p>A documented demand goes out. Medical specials. Future treatment. The case theory in one packet.</p>
-      </div>
-      <div class="approach-step">
-        <span class="approach-num">Step 4</span>
-        <h3>Negotiation</h3>
-        <p>The other side responds. If the offer matches the case, you decide. If it falls short, the complaint gets drafted.</p>
-      </div>
-      <div class="approach-step">
-        <span class="approach-num">Step 5</span>
-        <h3>Trial</h3>
-        <p>The case goes to a jury. Our partners have closed in front of every Common Pleas judge in the city.</p>
+        <div>
+          <p class="label">Attorneys. Every one named, bylined, and on the docket.</p>
+          <div class="eeat-avatars" aria-hidden="true">
+            <div class="av" style="background-image:url('images/attorneys/robert-e-mccann.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/timothy-a-dillon.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/mark-jaffe.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/patrick-c-lamb.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/thomas-j-omalley.webp')"></div>
+            <div class="av" style="background-image:url('images/attorneys/david-s-bigelow.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/michael-p-minuti.png')"></div>
+            <div class="av" style="background-image:url('images/attorneys/jonathan-m-bigelow.webp')"></div>
+            <span class="av-meta">8 named attorneys</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1019,7 +1416,7 @@ a { color: inherit; }
   <div class="section-inner">
     <p class="section-eyebrow">The bench</p>
     <div class="section-head">
-      <h2 id="bench-heading">They try the cases.<br>They write the articles.</h2>
+      <h2 id="bench-heading">Our attorneys.</h2>
       <p>The lawyer who tries your case is the lawyer who writes about it.</p>
     </div>
     <div class="bench-grid">
@@ -1052,7 +1449,7 @@ a { color: inherit; }
         <div>
           <h3 class="bench-name">Patrick C.<br>Lamb</h3>
           <p class="bench-role">Partner · Trial</p>
-          <p>Super Lawyers since 2008. Closes the case to the jury.</p>
+          <p>Super Lawyers since 2008. Closes to the jury.</p>
         </div>
       </a>
       <a class="bench-card" href="#thomas">
@@ -1083,10 +1480,83 @@ a { color: inherit; }
   </div>
 </section>
 
+<section class="approach section dark" id="approach" aria-labelledby="how-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">First call to verdict</p>
+    <div class="section-head">
+      <h2 id="how-heading">How we work.</h2>
+      <p>Intake. Reconstruction. Demand. Negotiation. Trial. The defense bar knows the order. <a href="/how-we-work/" style="color:var(--brass-bright); text-decoration: underline; text-underline-offset: 4px;">See the full sequence.</a></p>
+    </div>
+    <!--
+      MOVED TO /how-we-work/. Full 5 step copy preserved here for that page build.
+      Homepage now shows the one line teaser above only.
+
+      Step 1. Intake. You call. An attorney calls you back the same day. Police report, EMT run sheet, every witness on scene.
+      Step 2. Reconstruction. Independent crash reconstruction. On site photography. Scene measurement. Locked in before the adjuster opens a file.
+      Step 3. Demand. A documented demand goes out. Medical specials. Future treatment. The matter theory in one packet.
+      Step 4. Negotiation. The other side responds. If the offer matches the file, you decide. If it falls short, the complaint gets drafted.
+      Step 5. Trial. The matter goes to a jury. Our partners have closed in front of every Common Pleas judge in the city.
+    -->
+  </div>
+</section>
+
+<section class="section" id="offices" aria-labelledby="offices-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Offices</p>
+    <div class="section-head">
+      <h2 id="offices-heading">Our offices.</h2>
+      <p>4 locations across Pennsylvania, Delaware, and New Jersey. Same team. Same standard.</p>
+    </div>
+    <div class="offices-map">
+      <img src="images/maps/offices.png" alt="Map of the I-95 corridor showing 4 McCann offices: Philadelphia HQ, Wilmington Delaware, Haddon Township New Jersey, and Jenkintown Pennsylvania." width="1280" height="1000" loading="lazy">
+    </div>
+    <div class="offices-legend" aria-label="Office key">
+      <div class="item"><span class="pin">1</span> Philadelphia HQ</div>
+      <div class="item"><span class="pin">2</span> Wilmington, DE</div>
+      <div class="item"><span class="pin">3</span> Haddon Township, NJ</div>
+      <div class="item"><span class="pin">4</span> Jenkintown, PA</div>
+    </div>
+    <div class="offices-grid">
+      <div class="office-card">
+        <h3>Philadelphia HQ</h3>
+        <p>1845 Walnut Street, Suite 950<br>Philadelphia, PA 19103</p>
+        <a class="office-phone" href="tel:+12155698488">215.569.8488</a>
+        <p>M to F, 8a to 6p. Weekends by appointment.</p>
+        <a href="#directions-philadelphia">Directions</a>
+      </div>
+      <div class="office-card">
+        <h3>Wilmington</h3>
+        <p>Delaware office<br>Wilmington, DE</p>
+        <a class="office-phone" href="tel:+13028881221">302.888.1221</a>
+        <p>M to F, 8a to 6p. Weekends by appointment.</p>
+        <a href="#directions-wilmington">Directions</a>
+      </div>
+      <div class="office-card">
+        <h3>Haddon Township</h3>
+        <p>Haddon Township, NJ<br>Camden County</p>
+        <a class="office-phone" href="tel:+12155698488">215.569.8488</a>
+        <p>M to F, 8a to 6p. Weekends by appointment.</p>
+        <a href="#directions-haddon">Directions</a>
+      </div>
+      <div class="office-card">
+        <h3>Jenkintown</h3>
+        <p>Jenkintown, PA<br>Montgomery County</p>
+        <a class="office-phone" href="tel:+12155698488">215.569.8488</a>
+        <p>M to F, 8a to 6p. Weekends by appointment.</p>
+        <a href="#directions-jenkintown">Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<aside class="phone-strip" aria-label="Phone routing">
+  Calls answered 24/7 <span class="dot">·</span> <a href="tel:+12155698488">215.569.8488</a> <span class="dot">·</span> <a href="tel:+13028881221">302.888.1221</a>
+</aside>
+
 <section class="cta-block" id="contact">
   <div class="cta-inner">
     <div>
-      <h2>One call.<br>A real lawyer.</h2>
+      <h2>Schedule a consultation.</h2>
       <p>24/7. Free. Confidential. No fee unless we win.</p>
     </div>
     <div class="cta-actions">
@@ -1098,11 +1568,11 @@ a { color: inherit; }
 
 </main>
 
-<footer class="site-footer" id="offices">
+<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col">
       <img src="logos/mccann-logo-dark.png" alt="McCann Dillon Jaffe &amp; Lamb" style="height:36px; width:auto; margin-bottom:20px; display:block">
-      <p style="color:rgba(255,255,255,0.92); font-size:15px; max-width:340px; line-height:1.55">A Pennsylvania trial firm. 25 years on the docket. Licensed in PA, NJ, DE. The verdicts are the record.</p>
+      <p style="color:rgba(255,255,255,0.92); font-size:15px; max-width:340px; line-height:1.55">A Pennsylvania trial firm. 25 years on the docket. Licensed in PA, NJ, DE. The verdicts are the record. Philadelphia personal injury lawyer for car accident, truck accident, medical malpractice, and wrongful death cases.</p>
     </div>
     <div class="footer-col">
       <h4>Philadelphia HQ</h4>
