@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>McCann Dillon Jaffe &amp; Lamb · Philadelphia Trial Lawyers · 25 Years on the Docket</title>
+<meta name="description" content="A Pennsylvania trial firm. Every case prepared for verdict. $200M+ recovered across PA, NJ, DE. 17 verdicts on the public docket. Talk to a trial lawyer 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "@id": "https://www.mccanninjurylaw.com/#firm",
+      "name": "McCann Dillon Jaffe & Lamb, LLC",
+      "url": "https://www.mccanninjurylaw.com/",
+      "image": "https://www.mccanninjurylaw.com/wp-content/uploads/2021/05/McCann-logo.png",
+      "telephone": "+1-215-569-8488",
+      "areaServed": ["Pennsylvania", "New Jersey", "Delaware"],
+      "address": [
+        {"@type": "PostalAddress", "streetAddress": "1845 Walnut Street, Suite 950", "addressLocality": "Philadelphia", "addressRegion": "PA", "postalCode": "19103", "addressCountry": "US"},
+        {"@type": "PostalAddress", "addressLocality": "Wilmington", "addressRegion": "DE", "addressCountry": "US"},
+        {"@type": "PostalAddress", "addressLocality": "Haddon Township", "addressRegion": "NJ", "addressCountry": "US"},
+        {"@type": "PostalAddress", "addressLocality": "Jenkintown", "addressRegion": "PA", "addressCountry": "US"}
+      ],
+      "founder": {"@type": "Person", "@id": "https://www.mccanninjurylaw.com/our-attorneys/robert-e-mccann/#person"},
+      "knowsAbout": ["personal injury", "trial practice", "FELA", "professional liability", "premises liability", "products liability", "medical malpractice", "construction accidents", "automobile accidents"],
+      "award": ["Super Lawyers", "Million Dollar Advocates Forum", "Martindale AV", "National Trial Lawyers Top 100"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.mccanninjurylaw.com/our-attorneys/robert-e-mccann/#person",
+      "name": "Robert E. McCann",
+      "jobTitle": "Founding Member",
+      "worksFor": {"@id": "https://www.mccanninjurylaw.com/#firm"},
+      "alumniOf": ["Widener University School of Law", "Swarthmore College"],
+      "knowsAbout": ["Pennsylvania personal injury law", "dram shop", "professional liability", "FELA"]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --navy: #0B2545;
+  --navy-deep: #071A33;
+  --brass: #E8A22C;
+  --brass-bright: #FFC43D;
+  --crimson: #C03221;
+  --newsprint: #F4EDE0;
+  --newsprint-50: #FBF7EF;
+  --marble: #ECE7DC;
+  --slate: #5A6F8F;
+  --slate-700: #3C4A77;
+  --ink: #12110F;
+  --paper: #FFFFFF;
+
+  --display: "Anton", Impact, sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --content-max: 1200px;
+  --content-pad: clamp(20px, 5vw, 64px);
+}
+
+/* ─── E-E-A-T big-number row override (Wave 2 layout fix) ─── */
+.eeat-bignum {
+  display: grid; gap: 48px;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+}
+.eeat-bignum .row {
+  display: grid; grid-template-columns: 1fr;
+  gap: 16px; align-items: baseline;
+  padding-top: 28px;
+  border-top: 1px solid rgba(11,37,69,0.18);
+}
+.eeat-bignum .row .num {
+  font-family: var(--display);
+  font-size: clamp(72px, 12vw, 160px);
+  color: var(--navy); line-height: 0.85; font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.eeat-bignum .row .label {
+  font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--slate-700); line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .eeat-bignum .row { grid-template-columns: 1.1fr 1fr; gap: 40px; }
+  .eeat-bignum .row .label { padding-bottom: 18px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--newsprint-50);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+/* ─── Skip link ─────────────────────────── */
+.skip-link {
+  position: absolute; left: -9999px;
+  background: var(--brass); color: var(--ink);
+  padding: 12px 20px; z-index: 100; font-weight: 700;
+}
+.skip-link:focus { left: 16px; top: 16px; }
+
+/* ─── Top alert bar ─────────────────────── */
+.alertbar {
+  background: var(--crimson); color: var(--paper);
+  text-align: center; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.04em; padding: 8px 16px;
+  font-family: var(--mono);
+}
+.alertbar strong { font-weight: 700; }
+
+/* ─── Header / Nav ──────────────────────── */
+.site-header {
+  background: var(--navy); color: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+  border-bottom: 1px solid rgba(232,162,44,0.18);
+}
+.nav {
+  max-width: var(--content-max); margin: 0 auto;
+  display: flex; align-items: center; gap: 24px;
+  padding: 14px var(--content-pad);
+}
+.brand {
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none; color: var(--paper);
+}
+.brand-logo {
+  height: 32px; width: auto; display: block;
+}
+.brand-tag {
+  display: none;
+  font-family: var(--mono);
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 0.2em; color: var(--brass-bright);
+  text-transform: uppercase;
+  padding-left: 14px;
+  border-left: 1px solid rgba(232,162,44,0.3);
+  line-height: 1.3;
+}
+@media (min-width: 900px) { .brand-tag { display: block; } }
+.nav-links {
+  display: none; gap: 28px; margin-left: auto;
+  font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+}
+.nav-links > a, .nav-item > a {
+  text-decoration: none; padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--paper);
+}
+.nav-links > a:hover, .nav-links > a:focus-visible,
+.nav-item > a:hover, .nav-item > a:focus-visible {
+  border-bottom-color: var(--brass); color: var(--brass-bright);
+  outline: none;
+}
+.nav-item { position: relative; }
+.nav-item > a::after {
+  content: "▾"; font-size: 9px; opacity: 0.7;
+}
+.nav-dropdown {
+  position: absolute; top: 100%; left: -16px;
+  background: var(--navy-deep);
+  border: 1px solid rgba(232,162,44,0.25);
+  border-top: 2px solid var(--brass);
+  list-style: none; margin: 0; padding: 8px 0;
+  min-width: 280px;
+  box-shadow: 0 16px 40px rgba(7,26,51,0.5);
+  opacity: 0; visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
+  z-index: 60;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.nav-dropdown li { margin: 0; }
+.nav-dropdown a {
+  display: block; padding: 12px 24px;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px; text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.nav-dropdown a:hover, .nav-dropdown a:focus-visible {
+  background: var(--navy);
+  border-left-color: var(--brass);
+  color: var(--brass-bright); outline: none;
+}
+.nav-dropdown-meta {
+  display: block; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--brass-bright); margin-top: 2px; font-weight: 600;
+}
+.nav-phone {
+  margin-left: auto; display: flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-weight: 700; font-size: 14px;
+  color: var(--brass-bright); text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav-phone svg { width: 16px; height: 16px; flex: 0 0 auto; }
+@media (min-width: 1024px) {
+  .nav-links { display: flex; }
+  .nav-phone { margin-left: 0; }
+}
+
+/* ─── Hero ─────────────────────────────── */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--navy);
+  color: var(--paper);
+  isolation: isolate;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: -1;
+  background-image: linear-gradient(180deg, rgba(11,37,69,0.55) 0%, rgba(11,37,69,0.85) 100%), url("images/scenes/ctv-scene-4-relief.png");
+  background-size: cover; background-position: center;
+  filter: saturate(1.05);
+}
+.hero-inner {
+  max-width: var(--content-max); margin: 0 auto;
+  padding: 80px var(--content-pad) 60px;
+  display: grid; gap: 40px;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.32em; color: var(--brass-bright);
+  text-transform: uppercase; font-weight: 600;
+}
+.hero-eyebrow::before {
+  content: ""; display: inline-block;
+  width: 28px; height: 1px; background: var(--brass);
+  vertical-align: middle; margin-right: 14px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(48px, 9vw, 120px);
+  line-height: 0.92; letter-spacing: -0.01em;
+  margin: 0 0 28px; font-weight: 400;
+}
+.hero h1 strong {
+  color: var(--brass); font-weight: 400;
+}
+.hero-sub {
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.45; color: rgba(255,255,255,0.92);
+  max-width: 640px; margin: 0 0 36px;
+  font-weight: 300;
+}
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 18px 28px; border: none; cursor: pointer;
+  font-family: var(--body); font-size: 15px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; min-height: 56px;
+  transition: transform 0.1s, background 0.15s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--brass); color: var(--ink);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: var(--brass-bright); outline: none;
+}
+.btn-ghost {
+  background: transparent; color: var(--paper);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.btn-ghost:hover, .btn-ghost:focus-visible {
+  border-color: var(--brass); color: var(--brass-bright); outline: none;
+}
+.hero-trustrow {
+  display: grid; gap: 16px 32px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 36px;
+  border-top: 1px solid rgba(232,162,44,0.25);
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+.hero-trustrow div {
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-trustrow strong { color: var(--brass-bright); font-weight: 700; }
+@media (min-width: 768px) {
+  .hero-trustrow { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ─── Verdict Ledger ─────────────────────── */
+.ledger {
+  background: var(--navy-deep); color: var(--paper);
+  padding: 0 0 0 0;
+  border-top: 1px solid rgba(232,162,44,0.18);
+}
+.ledger-strip {
+  max-width: var(--content-max); margin: 0 auto;
+  padding: 60px var(--content-pad);
+  display: grid; gap: 40px;
+  grid-template-columns: 1fr;
+}
+.ledger-head {
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.28em; color: var(--brass-bright);
+  text-transform: uppercase;
+}
+.ledger-head h2 {
+  font-family: var(--display); font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -0.005em; line-height: 1; margin: 12px 0 0;
+  color: var(--paper); font-weight: 400;
+}
+.ledger-grid {
+  display: grid; gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.verdict {
+  border-top: 1px solid rgba(232,162,44,0.25);
+  padding-top: 18px;
+}
+.verdict-amount {
+  font-family: var(--display); font-size: clamp(40px, 6vw, 72px);
+  color: var(--brass); line-height: 0.95; letter-spacing: -0.005em;
+}
+.verdict-label {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.18em; color: rgba(255,255,255,0.7);
+  text-transform: uppercase; margin-top: 6px; line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .ledger-grid { grid-template-columns: repeat(4, 1fr); }
+  .ledger-strip { grid-template-columns: 1fr 3fr; align-items: end; gap: 56px; }
+}
+
+/* ─── Section base ─────────────────────── */
+.section {
+  padding: 100px 0;
+  background: var(--newsprint-50);
+}
+.section.dark { background: var(--navy); color: var(--paper); }
+.section.cream { background: var(--newsprint); }
+.section-inner {
+  max-width: var(--content-max); margin: 0 auto;
+  padding: 0 var(--content-pad);
+}
+.section-eyebrow {
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.28em; color: var(--navy);
+  text-transform: uppercase; font-weight: 700;
+  margin: 0 0 16px;
+}
+.section-eyebrow::before {
+  content: ""; display: inline-block;
+  width: 24px; height: 1px; background: var(--navy);
+  vertical-align: middle; margin-right: 14px;
+}
+.section.dark .section-eyebrow,
+.approach .section-eyebrow {
+  color: var(--brass-bright);
+}
+.section.dark .section-eyebrow::before,
+.approach .section-eyebrow::before {
+  background: var(--brass);
+}
+.section-head h2 {
+  font-family: var(--display);
+  font-size: clamp(40px, 7vw, 88px);
+  line-height: 0.95; letter-spacing: -0.01em;
+  margin: 0 0 28px; font-weight: 400;
+  color: var(--ink);
+}
+.section.dark .section-head h2 { color: var(--paper); }
+.section-head p {
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.55; max-width: 720px;
+  color: var(--slate-700);
+  margin: 0 0 56px;
+}
+.section.dark .section-head p { color: rgba(255,255,255,0.85); }
+
+/* ─── Editorial / Investigations ──────── */
+.editorial-grid {
+  display: grid; gap: 32px;
+  grid-template-columns: 1fr;
+}
+.article-card {
+  background: var(--paper);
+  text-decoration: none; color: var(--ink);
+  display: flex; flex-direction: column;
+  border: 1px solid rgba(11,37,69,0.08);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.article-card:hover, .article-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(11,37,69,0.12);
+  border-color: var(--brass);
+  outline: none;
+}
+.article-card-image {
+  aspect-ratio: 16/10;
+  background-size: cover; background-position: center;
+  background-color: var(--navy-deep);
+}
+.article-card-body {
+  padding: 24px 24px 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  flex: 1;
+}
+.article-source {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700;
+}
+.article-card h3 {
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.05; letter-spacing: -0.005em;
+  margin: 0; font-weight: 400; color: var(--ink);
+}
+.article-card p {
+  margin: 0; font-size: 15px; line-height: 1.5;
+  color: var(--slate-700); flex: 1;
+}
+.byline {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(11,37,69,0.08);
+  margin-top: auto;
+}
+.byline-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background-size: cover; background-position: center;
+  background-color: var(--marble); flex: 0 0 auto;
+}
+.byline-name {
+  font-size: 13px; font-weight: 600; color: var(--ink);
+}
+.byline-role {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--slate); margin-top: 1px;
+}
+@media (min-width: 700px) {
+  .editorial-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .editorial-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ─── Practice areas ─────────────────────── */
+.practice-grid {
+  display: grid; gap: 2px;
+  grid-template-columns: 1fr;
+  background: rgba(11,37,69,0.1);
+  border: 1px solid rgba(11,37,69,0.1);
+}
+.practice {
+  background: var(--newsprint);
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 12px;
+  text-decoration: none; color: var(--ink);
+  transition: background 0.15s;
+  min-height: 200px;
+}
+.practice:hover, .practice:focus-visible {
+  background: var(--paper); outline: none;
+}
+.practice-num {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.2em; color: var(--navy);
+  font-weight: 700;
+}
+.practice h3 {
+  font-family: var(--display); font-size: 28px;
+  line-height: 1; letter-spacing: -0.005em;
+  margin: 0; font-weight: 400;
+}
+.practice p {
+  margin: 0; font-size: 14px; line-height: 1.5;
+  color: var(--slate-700); flex: 1;
+}
+.practice-cta {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink); font-weight: 700;
+  display: flex; align-items: center; gap: 6px;
+}
+.practice-cta::after {
+  content: "→"; font-family: var(--body); font-weight: 400;
+}
+@media (min-width: 600px) { .practice-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .practice-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ─── Bench / Attorneys ─────────────────── */
+.bench-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.bench-card {
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.bench-photo {
+  aspect-ratio: 4/5;
+  background: var(--navy-deep);
+  background-size: cover; background-position: center top;
+  filter: grayscale(0.15) contrast(1.05);
+  transition: filter 0.2s;
+}
+.bench-card:hover .bench-photo,
+.bench-card:focus-visible .bench-photo {
+  filter: grayscale(0) contrast(1);
+}
+.bench-name {
+  font-family: var(--display);
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1; letter-spacing: -0.005em;
+  margin: 0;
+}
+.bench-role {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--navy); font-weight: 700; margin: 4px 0 0;
+}
+.bench-card p {
+  margin: 4px 0 0; font-size: 14px; line-height: 1.5;
+  color: var(--slate-700);
+}
+@media (min-width: 700px) { .bench-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .bench-grid { grid-template-columns: repeat(7, 1fr); } }
+
+/* ─── E-E-A-T proof strip ─────────────────── */
+.eeat {
+  background: var(--newsprint); color: var(--ink);
+  padding: 80px 0;
+  border-top: 1px solid rgba(11,37,69,0.08);
+  border-bottom: 1px solid rgba(11,37,69,0.08);
+}
+.eeat-grid {
+  display: grid; gap: 56px;
+  grid-template-columns: 1fr;
+}
+.eeat-pillars {
+  display: grid; gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.eeat-pillar-num {
+  font-family: var(--display); font-size: clamp(56px, 8vw, 96px);
+  color: var(--navy); line-height: 0.9; font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.eeat-pillar-label {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--slate-700); margin-top: 6px; line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .eeat-grid { grid-template-columns: 1fr 2fr; align-items: end; gap: 80px; }
+  .eeat-pillars { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ─── Approach (CTV-arc-inspired storytelling) ─── */
+.approach {
+  background: var(--navy); color: var(--paper);
+  padding: 100px 0;
+}
+.approach-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+}
+.approach-step {
+  background: var(--navy-deep);
+  border: 1px solid rgba(232,162,44,0.18);
+  padding: 28px 24px 32px;
+  display: grid; gap: 14px;
+}
+.approach-num {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.22em; color: var(--brass-bright);
+}
+.approach-step h3 {
+  font-family: var(--display); font-size: 26px;
+  line-height: 1; margin: 0; font-weight: 400;
+  color: var(--paper);
+}
+.approach-step p {
+  margin: 0; font-size: 15px; line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+}
+@media (min-width: 700px) { .approach-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .approach-grid { grid-template-columns: repeat(5, 1fr); } }
+
+/* ─── CTA Block ─────────────────────────── */
+.cta-block {
+  background: var(--brass); color: var(--ink);
+  padding: 80px 0;
+}
+.cta-inner {
+  max-width: var(--content-max); margin: 0 auto;
+  padding: 0 var(--content-pad);
+  display: grid; gap: 32px; grid-template-columns: 1fr;
+  align-items: center;
+}
+.cta-inner h2 {
+  font-family: var(--display); font-size: clamp(36px, 6vw, 72px);
+  line-height: 0.95; margin: 0; font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.cta-inner p {
+  margin: 0; font-size: 17px; max-width: 540px;
+  line-height: 1.5;
+}
+.cta-actions {
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+.btn-dark {
+  background: var(--ink); color: var(--brass-bright);
+}
+.btn-dark:hover, .btn-dark:focus-visible {
+  background: var(--navy-deep); outline: none;
+}
+@media (min-width: 900px) {
+  .cta-inner { grid-template-columns: 1.3fr 1fr; }
+  .cta-actions { justify-content: flex-end; }
+}
+
+/* ─── Footer ─────────────────────────────── */
+.site-footer {
+  background: var(--navy-deep); color: rgba(255,255,255,0.85);
+  padding: 80px 0 32px;
+  font-size: 14px; line-height: 1.55;
+}
+.footer-grid {
+  max-width: var(--content-max); margin: 0 auto;
+  padding: 0 var(--content-pad);
+  display: grid; gap: 48px;
+  grid-template-columns: 1fr;
+}
+.footer-col h4 {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brass-bright); margin: 0 0 16px;
+  font-weight: 600;
+}
+.footer-col p, .footer-col a {
+  margin: 0 0 6px; color: rgba(255,255,255,0.75);
+  text-decoration: none; display: block;
+}
+.footer-col a:hover { color: var(--brass-bright); }
+.footer-bottom {
+  max-width: var(--content-max); margin: 56px auto 0;
+  padding: 24px var(--content-pad) 0;
+  border-top: 1px solid rgba(232,162,44,0.18);
+  display: flex; flex-direction: column; gap: 14px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.55);
+}
+.footer-bottom strong { color: var(--brass-bright); font-weight: 600; }
+@media (min-width: 700px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) {
+  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr 1fr; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+}
+
+/* ─── Focus ring ─────────────────────────── */
+*:focus-visible {
+  outline: 3px solid var(--brass-bright);
+  outline-offset: 2px;
+}
+
+/* ─── Reduced motion ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/" aria-label="McCann Dillon Jaffe & Lamb home">
+      <img class="brand-logo" src="logos/mccann-logo-dark.png" alt="McCann Dillon Jaffe &amp; Lamb">
+      <span class="brand-tag">Philadelphia<br>Trial Lawyers</span>
+    </a>
+    <div class="nav-links">
+      <a href="#investigations">Investigations</a>
+      <div class="nav-item">
+        <a href="#practice" aria-haspopup="true" aria-expanded="false">Practice</a>
+        <ul class="nav-dropdown" role="menu" aria-label="Practice areas">
+          <li><a href="#car" role="menuitem">Car &amp; truck accidents<span class="nav-dropdown-meta">I-95 · Roosevelt Blvd · Schuylkill</span></a></li>
+          <li><a href="#construction" role="menuitem">Construction &amp; FELA<span class="nav-dropdown-meta">SEPTA · Amtrak · multi-employer</span></a></li>
+          <li><a href="#medmal" role="menuitem">Medical malpractice<span class="nav-dropdown-meta">MCARE Act · informed consent</span></a></li>
+          <li><a href="#premises" role="menuitem">Premises liability<span class="nav-dropdown-meta">Multi-family · commercial</span></a></li>
+          <li><a href="#products" role="menuitem">Products liability<span class="nav-dropdown-meta">Mass tort · E.D. Pa.</span></a></li>
+          <li><a href="#dramshop" role="menuitem">Dram shop<span class="nav-dropdown-meta">Center City · venue</span></a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#bench" aria-haspopup="true" aria-expanded="false">Attorneys</a>
+        <ul class="nav-dropdown" role="menu" aria-label="Attorneys">
+          <li><a href="#robert" role="menuitem">Robert E. McCann<span class="nav-dropdown-meta">Founding Member · Settlement Master</span></a></li>
+          <li><a href="#timothy" role="menuitem">Timothy A. Dillon<span class="nav-dropdown-meta">Partner · Delaware</span></a></li>
+          <li><a href="#mark" role="menuitem">Mark Jaffe<span class="nav-dropdown-meta">Partner · Appellate</span></a></li>
+          <li><a href="#patrick" role="menuitem">Patrick C. Lamb<span class="nav-dropdown-meta">Partner · Trial</span></a></li>
+          <li><a href="#thomas" role="menuitem">Thomas J. O'Malley<span class="nav-dropdown-meta">Attorney · Resources</span></a></li>
+          <li><a href="#david" role="menuitem">David S. Bigelow<span class="nav-dropdown-meta">Attorney · Civic</span></a></li>
+          <li><a href="#michael" role="menuitem">Michael P. Minuti<span class="nav-dropdown-meta">Attorney · Industry · DE</span></a></li>
+        </ul>
+      </div>
+      <a href="#approach">Approach</a>
+      <a href="#offices">Offices</a>
+    </div>
+    <a class="nav-phone" href="tel:+12155698488" aria-label="Call Philadelphia office">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>
+      215.569.8488
+    </a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Philadelphia · Wilmington · Haddon Township · Jenkintown</p>
+      <h1 id="hero-heading">25 Years.<br>One Record.<br><strong>One Call.</strong></h1>
+      <p class="hero-sub">We try the case. The record is public.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Talk to a trial lawyer</a>
+        <a class="btn btn-ghost" href="#investigations">Read the investigations</a>
+      </div>
+      <div class="hero-trustrow">
+        <div><strong>$200M+</strong> recovered</div>
+        <div><strong>17</strong> verdicts on record</div>
+        <div><strong>PA · NJ · DE</strong> licensed</div>
+        <div><strong>Since '02</strong> Settlement Master</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ledger" aria-labelledby="ledger-heading">
+  <div class="ledger-strip">
+    <div class="ledger-head">
+      <p>On the record</p>
+      <h2 id="ledger-heading">The verdicts are the record.</h2>
+    </div>
+    <div class="ledger-grid">
+      <div class="verdict">
+        <div class="verdict-amount">$9.5M</div>
+        <p class="verdict-label">Construction site fall · Philadelphia County · 2024</p>
+      </div>
+      <div class="verdict">
+        <div class="verdict-amount">$8.0M</div>
+        <p class="verdict-label">Medical malpractice · Delaware County · 2023</p>
+      </div>
+      <div class="verdict">
+        <div class="verdict-amount">$6.0M</div>
+        <p class="verdict-label">Trucking, I-95 corridor · Philadelphia · 2023</p>
+      </div>
+      <div class="verdict">
+        <div class="verdict-amount">$5.75M</div>
+        <p class="verdict-label">Premises liability · Montgomery County · 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="investigations" aria-labelledby="investigations-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Investigations</p>
+    <div class="section-head">
+      <h2 id="investigations-heading">Every article<br>is a case file.</h2>
+      <p>6 investigations. 6 bylines. Every one cites a verdict, a statute, or the docket.</p>
+    </div>
+
+    <div class="editorial-grid">
+
+      <a class="article-card" href="article-i95-verdicts.html">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-i95-verdicts.png')" role="img" aria-label="I-95 corridor"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · PA Unified Judicial System · 73 verdicts</p>
+          <h3>What a Pennsylvania jury actually awards for an I-95 multi-vehicle crash, 2018 to 2025.</h3>
+          <p>I pulled every I-95 verdict slip from Philadelphia and Delaware County juries over 7 years. 73 cases. The pattern is on the docket.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/robert-e-mccann.png')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">Robert E. McCann</div>
+              <div class="byline-role">Founding Member · Editor-in-Chief</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="article-card" href="#article-roosevelt">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-roosevelt-blvd.png')" role="img" aria-label="Roosevelt Boulevard"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · PPD Crash Data · Vision Zero PHL · 41 fatalities</p>
+          <h3>You were hit on Roosevelt Boulevard. Here's what to do before the adjuster calls.</h3>
+          <p>Roosevelt Boulevard owns 1 in 8 pedestrian fatalities in Philadelphia. Your call order matters. Start here.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/thomas-j-omalley.webp')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">Thomas J. O'Malley</div>
+              <div class="byline-role">Attorney · Client Resources</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="article-card" href="#article-septa-fela">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-septa-fela.png')" role="img" aria-label="SEPTA platform"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · 45 U.S.C. § 51 · FELA case law</p>
+          <h3>FELA, SEPTA, and Amtrak. Why rail worker injuries skip workers' comp.</h3>
+          <p>SEPTA, Amtrak, Norfolk Southern. A hurt rail worker files federal negligence, not comp. The ceiling runs roughly 3x.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/michael-p-minuti.png')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">Michael P. Minuti</div>
+              <div class="byline-role">Attorney · Construction &amp; FELA</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="article-card" href="#article-bridge">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-commodore-barry-bridge.png')" role="img" aria-label="Commodore Barry Bridge"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · PA Superior · DE Supreme · 51 percent threshold</p>
+          <h3>Your crash was on the Commodore Barry Bridge. Which state's law governs your claim?</h3>
+          <p>3 states. 3 comparative rules. For a plaintiff 30% at fault, the rule is the case.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/timothy-a-dillon.png')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">Timothy A. Dillon</div>
+              <div class="byline-role">Partner, Delaware Office</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="article-card" href="#article-uber">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-uber-university-city.png')" role="img" aria-label="University City"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · Uber rideshare policy · PA Insurance Department</p>
+          <h3>You got hit by an Uber in University City. Three insurance tiers. Here's the order to call.</h3>
+          <p>3 Uber tiers: offline, waiting, carrying. The tier they quote is rarely the one that applies to you.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/david-s-bigelow.png')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">David S. Bigelow</div>
+              <div class="byline-role">Attorney · Next-Gen / Civic</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="article-card" href="#article-mcare">
+        <div class="article-card-image" style="background-image:url('images/editorial/article-mcare-pa-supreme-court.png')" role="img" aria-label="PA Supreme Court"></div>
+        <div class="article-card-body">
+          <p class="article-source">Source · PA Supreme · MCARE Act reports · $2.1B impact</p>
+          <h3>Pennsylvania's MCARE Act at twenty. What the medical malpractice cap has cost plaintiffs.</h3>
+          <p>20 years of MCARE data. $2.1B in impact. The pattern reads in the verdict slips.</p>
+          <div class="byline">
+            <div class="byline-avatar" style="background-image:url('images/attorneys/mark-jaffe.png')" aria-hidden="true"></div>
+            <div>
+              <div class="byline-name">Mark Jaffe</div>
+              <div class="byline-role">Partner · Legal Authority</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="practice" aria-labelledby="practice-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Practice</p>
+    <div class="section-head">
+      <h2 id="practice-heading">Six lanes.<br>Every one tried.</h2>
+      <p>Argued to juries in Philadelphia, Delaware, Montgomery, Camden, and the Delaware Superior.</p>
+    </div>
+    <div class="practice-grid">
+      <a class="practice" href="#car">
+        <div class="practice-num">01</div>
+        <h3>Car &amp; truck<br>accidents</h3>
+        <p>I-95 multi-vehicle. Roosevelt Boulevard pedestrian. Schuylkill commercial truck. The crashes that build the longest verdicts.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+      <a class="practice" href="#construction">
+        <div class="practice-num">02</div>
+        <h3>Construction<br>&amp; FELA</h3>
+        <p>Scaffold collapse. Multi-employer doctrine. Refinery floors. Amtrak, SEPTA, and Norfolk Southern rail workers under FELA.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+      <a class="practice" href="#medmal">
+        <div class="practice-num">03</div>
+        <h3>Medical<br>malpractice</h3>
+        <p>MCARE Act litigation. Informed consent. Hospital and physician extender liability across PA and NJ.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+      <a class="practice" href="#premises">
+        <div class="practice-num">04</div>
+        <h3>Premises<br>liability</h3>
+        <p>Multi-family housing. Commercial property. Slip and fall under PA's modified comparative rule. Evidence is won in the first 72 hours.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+      <a class="practice" href="#products">
+        <div class="practice-num">05</div>
+        <h3>Products<br>liability</h3>
+        <p>Design defect. Failure to warn. Mass tort consolidation in the Eastern District of Pennsylvania. Vehicle and industrial equipment.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+      <a class="practice" href="#dramshop">
+        <div class="practice-num">06</div>
+        <h3>Dram shop<br>&amp; liquor liability</h3>
+        <p>Center City overserve cases. Restaurant venue claims. Third-party drunk driver fatalities under PA's dram shop statute.</p>
+        <div class="practice-cta">View cases</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="eeat" id="approach" aria-labelledby="eeat-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Why this firm</p>
+    <div>
+      <h2 id="eeat-heading" style="font-family:var(--display); font-size:clamp(40px,7vw,88px); line-height:0.95; margin:0; letter-spacing:-0.01em; font-weight:700; color:var(--ink); max-width:760px">Every case<br>prepared for trial.</h2>
+      <p style="margin:24px 0 0; max-width:640px; font-size:clamp(17px,1.6vw,20px); line-height:1.55; color:var(--slate-700)">8 attorneys. Licensed in PA, NJ, DE. 4 offices. Founder is a court-appointed Settlement Master since 2002. A partner clerked the PA Supreme Court.</p>
+    </div>
+    <div class="eeat-bignum">
+      <div class="row">
+        <div class="num">25</div>
+        <p class="label">Years on the docket. Pennsylvania, New Jersey, Delaware.</p>
+      </div>
+      <div class="row">
+        <div class="num">$200M+</div>
+        <p class="label">Recovered for clients across the tri-state corridor.</p>
+      </div>
+      <div class="row">
+        <div class="num">17</div>
+        <p class="label">Verdicts above $980K. Every one on the public docket.</p>
+      </div>
+      <div class="row">
+        <div class="num">8</div>
+        <p class="label">Attorneys. Every one named. Every one bylined.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach section dark" id="how" aria-labelledby="how-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">First call to verdict</p>
+    <div class="section-head">
+      <h2 id="how-heading">How a case<br>actually moves.</h2>
+      <p>5 steps. Same 5 for every case. The defense bar knows the order.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-step">
+        <span class="approach-num">Step 1</span>
+        <h3>Intake</h3>
+        <p>You call. An attorney calls you back the same day. Police report, EMT run sheet, every witness on scene.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">Step 2</span>
+        <h3>Reconstruction</h3>
+        <p>Independent crash reconstruction. On-site photography. Scene measurement. Locked in before the adjuster opens a file.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">Step 3</span>
+        <h3>Demand</h3>
+        <p>A documented demand goes out. Medical specials. Future treatment. The case theory in one packet.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">Step 4</span>
+        <h3>Negotiation</h3>
+        <p>The other side responds. If the offer matches the case, you decide. If it falls short, the complaint gets drafted.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">Step 5</span>
+        <h3>Trial</h3>
+        <p>The case goes to a jury. Our partners have closed in front of every Common Pleas judge in the city.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="bench" aria-labelledby="bench-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">The bench</p>
+    <div class="section-head">
+      <h2 id="bench-heading">They try the cases.<br>They write the articles.</h2>
+      <p>The lawyer who tries your case is the lawyer who writes about it.</p>
+    </div>
+    <div class="bench-grid">
+      <a class="bench-card" href="#robert">
+        <div class="bench-photo" style="background-image:url('images/attorneys/robert-e-mccann.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Robert E.<br>McCann</h3>
+          <p class="bench-role">Founding Member</p>
+          <p>Court-appointed Settlement Master since 2002. Super Lawyers since 2007.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#timothy">
+        <div class="bench-photo" style="background-image:url('images/attorneys/timothy-a-dillon.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Timothy A.<br>Dillon</h3>
+          <p class="bench-role">Partner · Delaware</p>
+          <p>Licensed in PA, NJ, DE. The tri-state corridor.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#mark">
+        <div class="bench-photo" style="background-image:url('images/attorneys/mark-jaffe.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Mark<br>Jaffe</h3>
+          <p class="bench-role">Partner · Appellate</p>
+          <p>PA Supreme Court clerk, 1995. NTL Top 100.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#patrick">
+        <div class="bench-photo" style="background-image:url('images/attorneys/patrick-c-lamb.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Patrick C.<br>Lamb</h3>
+          <p class="bench-role">Partner · Trial</p>
+          <p>Super Lawyers since 2008. Closes the case to the jury.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#thomas">
+        <div class="bench-photo" style="background-image:url('images/attorneys/thomas-j-omalley.webp')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Thomas J.<br>O'Malley</h3>
+          <p class="bench-role">Attorney · Resources</p>
+          <p>The Philly neighborhood voice. Fox Chase, Lawncrest, Burholme.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#david">
+        <div class="bench-photo" style="background-image:url('images/attorneys/david-s-bigelow.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">David S.<br>Bigelow</h3>
+          <p class="bench-role">Attorney · Civic</p>
+          <p>NTL Top 40 Under 40. Uber, Lyft, scooter, SEPTA.</p>
+        </div>
+      </a>
+      <a class="bench-card" href="#michael">
+        <div class="bench-photo" style="background-image:url('images/attorneys/michael-p-minuti.png')" aria-hidden="true"></div>
+        <div>
+          <h3 class="bench-name">Michael P.<br>Minuti</h3>
+          <p class="bench-role">Attorney · Industry</p>
+          <p>Construction. FELA. Refinery. Wake Forest Trial Bar.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block" id="contact">
+  <div class="cta-inner">
+    <div>
+      <h2>One call.<br>A real lawyer.</h2>
+      <p>24/7. Free. Confidential. No fee unless we win.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-dark" href="tel:+12155698488">Call 215.569.8488</a>
+      <a class="btn btn-dark" href="tel:+13028881221">Call 302.888.1221</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" id="offices">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="logos/mccann-logo-dark.png" alt="McCann Dillon Jaffe &amp; Lamb" style="height:36px; width:auto; margin-bottom:20px; display:block">
+      <p style="color:rgba(255,255,255,0.92); font-size:15px; max-width:340px; line-height:1.55">A Pennsylvania trial firm. 25 years on the docket. Licensed in PA, NJ, DE. The verdicts are the record.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Philadelphia HQ</h4>
+      <p>1845 Walnut Street, Suite 950<br>Philadelphia, PA 19103</p>
+      <a href="tel:+12155698488">215.569.8488</a>
+      <a href="tel:+12155698288" style="color:rgba(255,255,255,0.45)">Fax 215.569.8288</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wilmington, DE</h4>
+      <p>Delaware office<br>Wilmington, DE</p>
+      <a href="tel:+13028881221">302.888.1221</a>
+      <a href="tel:+13028881332" style="color:rgba(255,255,255,0.45)">Fax 302.888.1332</a>
+    </div>
+    <div class="footer-col">
+      <h4>NJ &amp; PA Suburban</h4>
+      <p>Haddon Township, NJ<br>Jenkintown, PA</p>
+      <a href="#offices">Office details</a>
+      <a href="mailto:contact@mccanninjurylaw.com">contact@mccanninjurylaw.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <strong>McCann Dillon Jaffe &amp; Lamb, LLC</strong> · Licensed in PA, NJ, DE</div>
+    <div>Attorney advertising in PA, NJ, DE. Past results don't promise the next one.</div>
+  </div>
+</footer>
+
+</body>
+</html>
