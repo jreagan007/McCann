@@ -14,20 +14,21 @@
     "current": "coding",
     "completed": ["audit", "research", "design"],
     "started": "2026-04-01",
-    "lastAdvanced": "2026-04-28T19:00:00Z",
-    "notes": "Homepage demo built as static HTML at clients/mccann-injury-law/homepage-demo/. PASS at 84 on demo-perfection-pass. Ready to show Robert McCann."
+    "lastAdvanced": "2026-05-01T00:00:00Z",
+    "notes": "Operational rebuild shipped at commit 6cc677f on main: intake form, press strip, testimonials, real Static-Maps office map at images/maps/offices.png, data trust row. 559 insertions, 78 deletions across index.html + .claude/launch.json + map asset. M001 demo (PASS 84) superseded by M001b rebuild. Ready to show Robert McCann."
   },
   "currentTask": {
     "id": "M002",
-    "title": "Show demo to Robert, gather feedback, schedule polish pass for the 5 priority items in 2026-04-28 preflight report",
+    "title": "Show rebuilt homepage to Robert, gather feedback, schedule polish pass for any new priority items",
     "skill": null
   },
   "queue": {
     "remaining": ["M002", "M003", "M004", "M005", "M006"],
-    "done": ["M001"],
+    "done": ["M001", "M001b"],
     "queueDoc": null,
     "draftQueue": [
       {"id": "M001", "title": "Build static HTML homepage demo + 1 full data-journalism article", "status": "DONE 2026-04-28"},
+      {"id": "M001b", "title": "Operational rebuild: intake form, press strip, testimonials, real map, data trust row", "status": "DONE 2026-05-01 commit 6cc677f"},
       {"id": "M002", "title": "Show demo to Robert, gather feedback"},
       {"id": "M003", "title": "Apply 5 priority fixes from preflight report (voice-profile.md extraction is rank 1)"},
       {"id": "M004", "title": "Decide: bootstrap full Astro repo at ~/Projects/mccann-injury-law/ vs continue iterating in homepage-demo/"},
